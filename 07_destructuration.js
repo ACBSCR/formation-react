@@ -48,6 +48,6 @@ const extractName = ({name}) => name
  * 
  */
 
-const removePassword = ({password, ...rest}) => {rest}
+const removePassword = ({password, ...rest}) => rest
 
 module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
