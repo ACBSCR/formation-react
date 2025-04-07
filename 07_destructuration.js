@@ -35,7 +35,7 @@ const extractRest = ([a, ...rest]) => rest
  * - interdiction d'utiliser l'opérateur "." pour accéder au champ "name"
  */
 
-const extractName = (obj) => obj.name
+const extractName = ({name,age}) => name 
 
 /**
  * utilisez la décomposition pour retourner l'objet utilisateur sans le champ "password"
@@ -48,6 +48,8 @@ const extractName = (obj) => obj.name
  * 
  */
 
-const removePassword = () => {};
+const removePassword = ({name,password}) => {name}
+
+console.log(removePassword({name: "toto", password: "1234"}))
 
 module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
