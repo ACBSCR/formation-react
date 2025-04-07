@@ -12,7 +12,7 @@
  *  - interdiction d'utiliser slice ou splice
  */
 
-const extractFirstTwo = ([a,b,...rest]) => [a,b]
+const extractFirstTwo = ([a,b]) => [a,b]
 
 /**
  * utilisez la décomposition pour extraire la premiere case du tableau et le reste du tableau
@@ -35,7 +35,7 @@ const extractRest = ([a, ...rest]) => rest
  * - interdiction d'utiliser l'opérateur "." pour accéder au champ "name"
  */
 
-const extractName = ({name,age}) => name 
+const extractName = ({name}) => name 
 
 /**
  * utilisez la décomposition pour retourner l'objet utilisateur sans le champ "password"
@@ -48,8 +48,6 @@ const extractName = ({name,age}) => name
  * 
  */
 
-const removePassword = ({name,password}) => {name}
-
-console.log(removePassword({name: "toto", password: "1234"}))
+const removePassword = ({password, ...rest}) => {rest}
 
 module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
